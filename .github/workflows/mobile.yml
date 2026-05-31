@@ -91,7 +91,6 @@ jobs:
 
       - name: Setup environment
         run: |
-          haxelib setup ~/haxelib
 
           
           printf "%s\n%s\n%s\n" \
