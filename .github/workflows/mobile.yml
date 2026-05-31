@@ -58,6 +58,14 @@ jobs:
          distribution: temurin
          java-version: '17'
 
+      - name: Setup haxelib
+        run: |
+          haxelib install lime --quiet
+          haxelib install openfl --quiet 
+          haxelib install flixel --quiet
+          haxelib install flixel-tools --quiet
+          haxelib install hxcpp --quiet
+
       - name: Restore cache
         if: ${{ github.event.inputs.rebuild_cache != 'Yes' || github.event_name == 'push'}}
         uses: actions/cache/restore@v4
