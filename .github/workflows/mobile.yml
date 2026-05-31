@@ -60,10 +60,13 @@ jobs:
 
       - name: Setup haxelib
         run: |
+          haxelib setup ~/haxelib
           haxelib install lime --quiet
-          haxelib install openfl --quiet 
+          haxelib install openfl --quiet
           haxelib install flixel --quiet
           haxelib install flixel-tools --quiet
+          haxelib install flixel-addons --quiet
+          haxelib install flixel-ui --quiet
           haxelib install hxcpp --quiet
 
       - name: Restore cache
